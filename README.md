@@ -7,8 +7,8 @@ The notebook also examines truncation windows, frozen versus fine-tuned DistilBE
 ## Clone the project
 
 ```bash
-git clone <REPOSITORY_URL>
-cd <REPOSITORY_FOLDER>
+git clone https://github.com/rupeshtimilsina/Assessment3
+cd https://github.com/rupeshtimilsina/Assessment3
 ```
 
 The trained model is about 268 MB. If the repository uses Git LFS, install it before pulling the model:
@@ -83,7 +83,6 @@ Part A writes trained models, results and demo data to `artifacts/`, `backup/` a
 ├── requirements.txt
 ├── demo.csv
 ├── poster.png
-├── make_poster.py
 ├── artifacts/
 │   ├── advanced/
 │   │   ├── config.json
