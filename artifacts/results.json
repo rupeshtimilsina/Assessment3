@@ -1,0 +1,124 @@
+{
+  "ablation": [
+    {
+      "run": "len512_head",
+      "max_length": 512,
+      "strategy": "head",
+      "freeze": false,
+      "val_macro_f1": 0.909,
+      "val_acc": 0.909,
+      "train_sec": 102
+    },
+    {
+      "run": "len256_tail",
+      "max_length": 256,
+      "strategy": "tail",
+      "freeze": false,
+      "val_macro_f1": 0.896,
+      "val_acc": 0.896,
+      "train_sec": 47
+    },
+    {
+      "run": "len256_head+tail",
+      "max_length": 256,
+      "strategy": "head+tail",
+      "freeze": false,
+      "val_macro_f1": 0.896,
+      "val_acc": 0.896,
+      "train_sec": 47
+    },
+    {
+      "run": "len256_head",
+      "max_length": 256,
+      "strategy": "head",
+      "freeze": false,
+      "val_macro_f1": 0.892,
+      "val_acc": 0.892,
+      "train_sec": 45
+    },
+    {
+      "run": "len256_frozen",
+      "max_length": 256,
+      "strategy": "head",
+      "freeze": true,
+      "val_macro_f1": 0.8479,
+      "val_acc": 0.848,
+      "train_sec": 15
+    },
+    {
+      "run": "len128_head",
+      "max_length": 128,
+      "strategy": "head",
+      "freeze": false,
+      "val_macro_f1": 0.839,
+      "val_acc": 0.839,
+      "train_sec": 28
+    }
+  ],
+  "baseline_ablation": [
+    {
+      "ngram": "(1, 1)",
+      "C": 1.0,
+      "val_macro_f1": 0.8589761669722182
+    },
+    {
+      "ngram": "(1, 1)",
+      "C": 4.0,
+      "val_macro_f1": 0.8659807012209758
+    },
+    {
+      "ngram": "(1, 1)",
+      "C": 16.0,
+      "val_macro_f1": 0.8629965749143729
+    },
+    {
+      "ngram": "(1, 2)",
+      "C": 1.0,
+      "val_macro_f1": 0.8569929926566402
+    },
+    {
+      "ngram": "(1, 2)",
+      "C": 4.0,
+      "val_macro_f1": 0.8649966249156229
+    },
+    {
+      "ngram": "(1, 2)",
+      "C": 16.0,
+      "val_macro_f1": 0.8689988209893889
+    }
+  ],
+  "test": {
+    "TF-IDF + LR": {
+      "macro_f1": 0.8664996996243242,
+      "acc": 0.8665,
+      "ci_lo": 0.8519912458926658,
+      "ci_hi": 0.8809918379380078
+    },
+    "DistilBERT": {
+      "macro_f1": 0.9129829446571528,
+      "acc": 0.913,
+      "ci_lo": 0.8999990599905399,
+      "ci_hi": 0.9244715446183425
+    }
+  },
+  "bias": [
+    {
+      "model": "TF-IDF (original)",
+      "val_macro_f1": 0.869,
+      "flip_rate": 0.0133,
+      "mean_abs_dP": 0.0144
+    },
+    {
+      "model": "TF-IDF + CDA",
+      "val_macro_f1": 0.869,
+      "flip_rate": 0.0033,
+      "mean_abs_dP": 0.0014
+    },
+    {
+      "model": "DistilBERT",
+      "val_macro_f1": 0.909,
+      "flip_rate": 0.0033,
+      "mean_abs_dP": 0.0025
+    }
+  ]
+}

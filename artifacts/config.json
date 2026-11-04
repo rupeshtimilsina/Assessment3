@@ -1,0 +1,13 @@
+{
+  "model_name": "distilbert-base-uncased",
+  "best": {
+    "max_length": 512,
+    "strategy": "head",
+    "freeze": false
+  },
+  "seed": 42,
+  "ablation_lengths": [
+    128,
+    256
+  ]
+}
