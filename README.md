@@ -7,8 +7,8 @@ The notebook also examines truncation windows, frozen versus fine-tuned DistilBE
 ## Clone the project
 
 ```bash
-git clone https://github.com/rupeshtimilsina/Assessment3
-cd https://github.com/rupeshtimilsina/Assessment3
+git clone https://github.com/rupeshtimilsina/Assessment3.git
+cd Assessment3
 ```
 
 The trained model is about 268 MB. If the repository uses Git LFS, install it before pulling the model:
@@ -55,7 +55,7 @@ For CPU-only demo use, install the PyTorch build suitable for the local machine 
 
 ## Run the offline demo
 
-1. Open `Assessment2_IMDb_Truncation_NLP.ipynb` in Jupyter, JupyterLab or VS Code.
+1. Open `Assessment3_IMDb_Truncation_NLP_Timilsina_SHEA24023.ipynb` in Jupyter, JupyterLab or VS Code.
 2. Select the virtual environment as the notebook kernel.
 3. Restart the kernel.
 4. Run the cells under **Part B: live demo**, beginning with the setup cell.
@@ -68,7 +68,7 @@ The demo includes predictions, a 128-versus-256 token toggle, visualisations, a 
 
 Part A downloads the IMDb dataset and trains the baseline and DistilBERT experiments. A GPU is recommended.
 
-1. Open `Assessment2_IMDb_Truncation_NLP.ipynb`.
+1. Open `Assessment3_IMDb_Truncation_NLP_Timilsina_SHEA24023.ipynb`.
 2. Restart the kernel.
 3. Run the cells under **Part A: training and experiments** from the beginning.
 
